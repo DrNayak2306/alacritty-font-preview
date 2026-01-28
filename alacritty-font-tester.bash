@@ -1,4 +1,4 @@
-#! /usr/bin/env bash
+#!/usr/bin/env bash
 
 config_file="$HOME/.config/alacritty/alacritty.toml"
 regular_fonts=$(fc-list : family style | awk -F, '/Regular/ {print $1}' | cut -d: -f1 | sed -E 's/[^ 0-9a-zA-Z]+$//; s/[^ 0-9a-zA-Z]+/\\&/g' | sort | uniq)
